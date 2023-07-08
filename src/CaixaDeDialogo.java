@@ -3,12 +3,21 @@ import javax.swing.*;
 public class CaixaDeDialogo {
 
     public static void main(String[] args) {
-        Object[] possibilidades = { "Conversor de moedas", "Outro conversor"};
+        Object[] opcoes = {"Conversor de moedas", "Outro conversor"};
 
-        Object selectedValue = JOptionPane.showInputDialog(null,
+        Object valorSelecionado = JOptionPane.showInputDialog(null,
                 "Escolha uma opção: ", "Menu",
                 JOptionPane.INFORMATION_MESSAGE, null,
-                possibilidades, possibilidades[0]);
+                opcoes, opcoes[0]);
+
+        if (valorSelecionado == opcoes[0]) {
+            int inputValor = Integer.parseInt(JOptionPane.showInputDialog("Insira um valor"));
+
+        } else if (valorSelecionado == opcoes[1]) {
+            JOptionPane.showMessageDialog(null, "Em construção", "Opção inválida", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Opção inválida", "Opção inválida", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
 
