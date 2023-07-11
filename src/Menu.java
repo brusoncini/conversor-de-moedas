@@ -6,115 +6,88 @@ public class Menu {
         boolean iniciarPrograma = true;
 
         while (iniciarPrograma) {
-            Object[] opcoes = {"Conversor de moedas", "Outro conversor"};
+            new MenuOpcoes();
 
-            Object conversorSelecionado = JOptionPane.showInputDialog(null,
-                    "Escolha uma opção: ", "Menu",
-                    JOptionPane.INFORMATION_MESSAGE, null,
-                    opcoes, opcoes[0]);
+            if (MenuOpcoes.conversorSelecionado == MenuOpcoes.opcoes[0]) {
+                new MenuMoedas();
 
-            if (conversorSelecionado == opcoes[0]) {
-                Object[] opcoesMoedas = {"de reais a dólares",
-                        "de reais a euros",
-                        "de reais a libras",
-                        "de reais a ienes",
-                        "de reais a won coreano",
-                        "de dólares a reais",
-                        "de euros a reais",
-                        "de libras a reais",
-                        "de ienes a reais",
-                        "de won coreano a reais"};
+                double inputValor = Double.parseDouble(JOptionPane.showInputDialog("Insira um valor"));
 
-                Object moedas = JOptionPane.showInputDialog(null,
-                        "Escolha a moeda a converter:", "Moedas",
-                        JOptionPane.INFORMATION_MESSAGE, null,
-                        opcoesMoedas, opcoesMoedas[0]);
-
-                // dados de 09/07/2023
-                Double cotacaoDolar = 4.88;
-                Double cotacaoEuros = 5.36;
-                Double cotacaoLibras = 6.27;
-                Double cotacaoIenes = 0.034;
-                Double cotacaoWonCoreano = 0.0038;
-
-                Double inputValor = Double.parseDouble(JOptionPane.showInputDialog("Insira um valor"));
-
-                if (moedas == opcoesMoedas[0]) {
-                    double conversao = inputValor / cotacaoDolar;
+                if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[0]) {
+                    double conversao = CalculosMoedas.reaisParaMoeda(inputValor, Cotacoes.cotacaoDolar);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de $ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[1]) {
-                    double conversao = inputValor / cotacaoEuros;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[1]) {
+                    double conversao = CalculosMoedas.reaisParaMoeda(inputValor, Cotacoes.cotacaoEuros);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de € " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[2]) {
-                    double conversao = inputValor / cotacaoLibras;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[2]) {
+                    double conversao = CalculosMoedas.reaisParaMoeda(inputValor, Cotacoes.cotacaoLibras);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de £ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[3]) {
-                    double conversao = inputValor / cotacaoIenes;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[3]) {
+                    double conversao = CalculosMoedas.reaisParaMoeda(inputValor, Cotacoes.cotacaoIenes);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de ¥ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[4]) {
-                    double conversao = inputValor / cotacaoWonCoreano;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[4]) {
+                    double conversao = CalculosMoedas.reaisParaMoeda(inputValor, Cotacoes.cotacaoWonCoreano);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de ₩ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[5]) {
-                    double conversao = inputValor * cotacaoDolar;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[5]) {
+                    double conversao = CalculosMoedas.moedaParaReais(inputValor, Cotacoes.cotacaoDolar);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de R$ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[6]) {
-                    double conversao = inputValor * cotacaoEuros;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[6]) {
+                    double conversao = CalculosMoedas.moedaParaReais(inputValor, Cotacoes.cotacaoEuros);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de R$ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[7]) {
-                    double conversao = inputValor * cotacaoLibras;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[7]) {
+                    double conversao = CalculosMoedas.moedaParaReais(inputValor, Cotacoes.cotacaoLibras);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de R$ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[8]) {
-                    double conversao = inputValor * cotacaoIenes;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[8]) {
+                    double conversao = CalculosMoedas.moedaParaReais(inputValor, Cotacoes.cotacaoIenes);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de R$ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
-                } else if (moedas == opcoesMoedas[9]) {
-                    double conversao = inputValor * cotacaoWonCoreano;
+                } else if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[9]) {
+                    double conversao = CalculosMoedas.moedaParaReais(inputValor, Cotacoes.cotacaoWonCoreano);
                     JOptionPane.showMessageDialog(null,
                             "O valor convertido é de R$ " + conversao,
                             "Conversão",
                             JOptionPane.INFORMATION_MESSAGE);
                 }
 
-                int continuar = JOptionPane.showConfirmDialog(null,
-                        "Deseja continuar?", "Continuar",
-                        JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
+                new Continuar();
 
-                if (continuar == JOptionPane.YES_OPTION) {
+                if (Continuar.continuar == JOptionPane.YES_OPTION) {
                     iniciarPrograma = true;
-                } else if (continuar == JOptionPane.NO_OPTION) {
+                } else if (Continuar.continuar == JOptionPane.NO_OPTION) {
                     iniciarPrograma = false;
                     JOptionPane.showMessageDialog(null, "Programa finalizado!", "Fim", JOptionPane.INFORMATION_MESSAGE);
-                } else if (continuar == JOptionPane.CANCEL_OPTION) {
+                } else if (Continuar.continuar == JOptionPane.CANCEL_OPTION) {
                     iniciarPrograma = false;
                     JOptionPane.showMessageDialog(null, "Programa concluído!", "Fim", JOptionPane.INFORMATION_MESSAGE);
                 }
-            } else if (conversorSelecionado == opcoes[1]) {
+
+            } else if (MenuOpcoes.conversorSelecionado == MenuOpcoes.opcoes[1]) {
                 iniciarPrograma = false;
                 JOptionPane.showMessageDialog(null, "Em construção", "Opção inválida", JOptionPane.ERROR_MESSAGE);
             } else {
