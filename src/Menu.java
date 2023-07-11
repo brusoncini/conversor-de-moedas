@@ -10,7 +10,6 @@ public class Menu {
 
             if (MenuOpcoes.conversorSelecionado == MenuOpcoes.opcoes[0]) {
                 new MenuMoedas();
-
                 double inputValor = Double.parseDouble(JOptionPane.showInputDialog("Insira um valor"));
 
                 if (MenuMoedas.moedas == MenuMoedas.opcoesMoedas[0]) {
