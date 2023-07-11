@@ -1,12 +1,12 @@
 # Conversor de Moedas #
 
-![Imagem do projeto](file:///C:/Users/Bruna/OneDrive/Imagens/Capturas%20de%20tela/Captura%20de%20tela%202023-07-11%20114410.png)
+![Imagem do projeto](img-conversor.png)
 
 ## 📝 Descrição do projeto ##
 
 Projeto criado para o desafio da Alura em conjunto com a Oracle, no Challenge ONE. #challengeOneConversor5
 
-![Badge do desafio](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671211937Prancheta_8.png?utm_campaign=alura_latam_-_challenge_email_projeto_5_br&utm_medium=email&utm_source=RD+Station)
+![Badge do desafio](badge.png)
 
 ## 🔧 Ferramentas e tecnologias ##
 
