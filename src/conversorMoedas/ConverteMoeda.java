@@ -1,4 +1,4 @@
-package ConversorMoedas;
+package conversorMoedas;
 
 import javax.swing.*;
 
