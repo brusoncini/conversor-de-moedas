@@ -16,7 +16,7 @@ Projeto criado para o desafio da Alura em conjunto com a Oracle, no Challenge ON
 ## 📌 Funcionalidades ##
 
 O objetivo do projeto é criar um conversor de moedas que realize as conversões de reais para várias outras moedas, assim como a conversão inversa também deve acontecer.
-Um desafio extra é adicionar outro conversor a este (em andamento.)
+Um desafio extra é adicionar outro conversor a este, e optei por adicionar um conversor de temperaturas. Ele funciona de maneira parecida com o primeiro.
 
 ## 👩🏻‍💻 Feito por ##
 
